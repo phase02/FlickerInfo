@@ -1,4 +1,4 @@
-var routerApp = angular.module('routerApp', [ 'ui.router' ]);
+var routerApp = angular.module('routerApp', [ 'ui.router']);
 
 routerApp.config(function($stateProvider, $urlRouterProvider) {
 
@@ -10,7 +10,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
 	.state('home', {
 		url : '/home',
 		templateUrl : 'partial-home.html',
-		controller: 'SampleController'
+		controller: 'loginControl'
 	}).
 	state('about', {
 		url : '/about',
