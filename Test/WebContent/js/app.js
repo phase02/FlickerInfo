@@ -9,12 +9,12 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
 	// HOME STATES AND NESTED VIEWS ========================================
 	.state('home', {
 		url : '/home',
-		templateUrl : 'partial-home.html',
+		templateUrl : 'view/partial-home.html',
 		controller: 'loginControl'
 	}).
 	state('about', {
 		url : '/about',
-		templateUrl : 'about-home.html',
+		templateUrl : 'view/about-home.html',
 		controller : 'SampleController'
 
 	});

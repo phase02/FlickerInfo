@@ -1,5 +1,14 @@
 @CHARSET "ISO-8859-1";
 
+.dahsboad {
+  display: grid;/* 
+  height: 100vh; */
+  
+  grid-template-areas:    "header  header"
+                          "nav    main"
+                          "footer footer";
+}
+
 #loginForm
 {
 	position: relative;
