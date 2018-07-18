@@ -12,17 +12,9 @@
 	grid-area: main;
 }
 
-.item4 {
-	grid-area: right;
-}
-
-.item5 {
-	grid-area: footer;
-}
-
 .grid-container {
 	display: grid;
-	grid-template-areas: 'menu header header header header header'
+	grid-template-areas: 'image header header header header header'
 		'menu main main main main main' 'menu main main main main main'
 		'menu main main main main main' 'menu main main main main main';
 	grid-gap: 10px;
@@ -41,16 +33,6 @@
 	top: 30%;
 }
 
-.img {
-	float:left;
-	grid-area: menu;
-	background-image: url(../imgs/myphoto.PNG);
-	grid-column: 1/2;
+.image {
+	grid-area: image;
 }
-
-/* img {
-	float:left;
-	grid-area: menu;
-	background-image: url(../imgs/myphoto.PNG);
-	grid-column: 1/2;
-}  */
