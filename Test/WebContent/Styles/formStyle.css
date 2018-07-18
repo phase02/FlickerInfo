@@ -1,17 +1,56 @@
 @CHARSET "ISO-8859-1";
 
-.dahsboad {
-  display: grid;/* 
-  height: 100vh; */
-  
-  grid-template-areas:    "header  header"
-                          "nav    main"
-                          "footer footer";
+.item1 {
+	grid-area: header;
 }
 
-#loginForm
-{
-	position: relative;
-	left:30%;
-	top:30%;
+.item2 {
+	grid-area: menu;
 }
+
+.item3 {
+	grid-area: main;
+}
+
+.item4 {
+	grid-area: right;
+}
+
+.item5 {
+	grid-area: footer;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-areas: 'menu header header header header header'
+		'menu main main main main main' 'menu main main main main main'
+		'menu main main main main main' 'menu main main main main main';
+	grid-gap: 10px;
+	background-color: #2196F3;
+	height: 100vh;
+	width: 100%;
+}
+
+.grid-container>div {
+	background-color: rgba(255, 255, 255, 0.8);
+}
+
+#loginForm {
+	position: relative;
+	left: 30%;
+	top: 30%;
+}
+
+.img {
+	float:left;
+	grid-area: menu;
+	background-image: url(../imgs/myphoto.PNG);
+	grid-column: 1/2;
+}
+
+/* img {
+	float:left;
+	grid-area: menu;
+	background-image: url(../imgs/myphoto.PNG);
+	grid-column: 1/2;
+}  */
