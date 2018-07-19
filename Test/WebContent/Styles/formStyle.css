@@ -1,6 +1,6 @@
 @CHARSET "ISO-8859-1";
 
-.item1 {
+/* .item1 {
 	grid-area: header;
 }
 
@@ -18,7 +18,7 @@
 		'menu main main main main main' 'menu main main main main main'
 		'menu main main main main main' 'menu main main main main main';
 	grid-gap: 10px;
-	background-color: #2196F3;
+	background-color: #7bd73e;
 	height: 100vh;
 	width: 100%;
 }
@@ -27,6 +27,7 @@
 	background-color: rgba(255, 255, 255, 0.8);
 }
 
+ */
 #loginForm {
 	position: relative;
 	left: 30%;
@@ -35,4 +36,44 @@
 
 .image {
 	grid-area: image;
+	border-radius: 50%;
+	height: 200px;
+	width: 200px;
+}
+
+img {
+	object-fit: cover;
+	height: inherit;
+	width: inherit;
+	border-radius: 50%;
+	border: 1px solid red;
+}
+
+.header {
+	border-radius: 25px;
+	border: 1px solid red;
+	height: 75px;
+	margin: 20px;
+	width: 1100px;
+}
+
+.menu {
+	border-radius: 25px;
+	border: 1px solid red;
+	height: 500px;
+	margin: 10px;
+	width: inherit;
+}
+
+.material {
+	border-radius: 25px;
+	border: 1px solid red;
+	height: 595px;
+	width: 1100px;
+	margin: 20px;
+}
+
+.h2, h2 {
+    font-size: 2.25em!important;
+    text-align: center;
 }

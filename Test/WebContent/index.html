@@ -2,7 +2,7 @@
 <!-- CSS (load bootstrap) -->
 <link rel="stylesheet"
 	href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-	
+
 <link href="Styles/formStyle.css" rel="stylesheet">
 <style>
 .navbar {
@@ -28,19 +28,21 @@
 	<!-- NAVIGATION -->
 	<nav class="navbar navbar-inverse" role="navigation">
 		<div class="navbar-header">
-			<a class="navbar-brand" ui-sref="#">AngularUI Router</a>
+			<a class="navbar-brand" ui-sref="#">Seattle Grace Hospital</a>
 		</div>
-		<ul class="nav navbar-nav">
-			<li><a ui-sref="home">Home</a></li>
+		<ul class="nav navbar-nav navbar-right">
+			<li><a ui-sref="home"><span class="glyphicon glyphicon-user"></span>
+					Sign Up</a></li>
 
-			<li><a ui-sref="about">SignUp Here!</a></li>
+			<li><a ui-sref="about"><span
+					class="glyphicon glyphicon-log-in"></span> Login</a></li>
 
 		</ul>
 	</nav>
 
-	
-		<!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
-		<div ui-view></div>
+
+	<!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
+	<div ui-view></div>
 
 </body>
 </html>
