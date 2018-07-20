@@ -14,7 +14,8 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
 	}).
 	state('about', {
 		url : '/about',
-		templateUrl : 'view/about-home.html'
+		templateUrl : 'view/about-home.html',
+		controller:'SampleController1'
 
 	});
 

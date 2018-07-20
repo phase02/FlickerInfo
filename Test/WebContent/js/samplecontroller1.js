@@ -3,7 +3,7 @@ routerApp.controller("SampleController1",function($scope,$stateParams,userServic
 	var customers=userService.get();
 	var name=$stateParams.listId;
 	$scope.description=$stateParams.description;
-	
+	$scope.userInfo = userService.get();
 	
 	$scope.list = [];
 	$scope.$watch('expiration', function(newValue, oldValue) {

@@ -14,9 +14,11 @@
 	</div>
 	<div class = "col-md-6">
 	<div class = "header">
-		<h1 class="h2">Welcome Dr.{{}}</h1>
+		<h1 class="h2">Welcome Dr.{{userInfo.name}}</h1>
 	</div>
-	<div class = "material"></div>
+	<div class = "material">
+		{{userInfo |json}}
+	</div>
 	</div>
 
 </div>

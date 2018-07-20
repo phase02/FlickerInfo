@@ -30,13 +30,18 @@
 		<div class="navbar-header">
 			<a class="navbar-brand" ui-sref="#">Seattle Grace Hospital</a>
 		</div>
-		<ul class="nav navbar-nav navbar-right">
+		<ul ng-hide="logedin" class="nav navbar-nav navbar-right">
 			<li><a ui-sref="home"><span class="glyphicon glyphicon-user"></span>
 					Sign Up</a></li>
 
 			<li><a ui-sref="about"><span
 					class="glyphicon glyphicon-log-in"></span> Login</a></li>
 
+		</ul>
+
+		<ul ng-show="logedin" class="nav navbar-nav navbar-right">
+			<li><a ui-sref="home"><span class="glyphicon glyphicon-user"></span>
+					{{userName}}</a></li>
 		</ul>
 	</nav>
 
