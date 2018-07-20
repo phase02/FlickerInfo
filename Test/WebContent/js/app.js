@@ -17,6 +17,9 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
 		templateUrl : 'view/about-home.html',
 		controller:'SampleController1'
 
+	}).state('signup', {
+		templateUrl : 'view/signUp.html'
+
 	});
 
 });
