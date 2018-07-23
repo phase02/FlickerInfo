@@ -1,4 +1,4 @@
-var routerApp = angular.module('routerApp', [ 'ui.router' ]);
+var routerApp = angular.module('routerApp', [ 'ui.router']);
 
 routerApp.config(function($stateProvider, $urlRouterProvider) {
 
@@ -9,28 +9,16 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
 	// HOME STATES AND NESTED VIEWS ========================================
 	.state('home', {
 		url : '/home',
-		templateUrl : 'partial-home.html',
-		controller: 'SampleController'
-	}).state('home.list', {
-		url : '/list',
-		templateUrl : 'partial-home-list.html',
-		controller : 'SampleController1'
-	}).state('home.name', {
-		url : '/name?listId&description',
-		templateUrl : 'details.html',
-		controller : 'SampleController1'
+		templateUrl : 'view/partial-home.html',
+		controller: 'loginControl'
 	}).
-
-	state('home.phone', {
-		url : '/phone/:phoneId',
-		templateUrl : 'details.html',
-		controller : 'SampleController1'
-	})
-
-	.state('about', {
+	state('about', {
 		url : '/about',
-		templateUrl : 'about-home.html',
-		controller : 'SampleController'
+		templateUrl : 'view/about-home.html',
+		controller:'SampleController1'
+
+	}).state('signup', {
+		templateUrl : 'view/signUp.html'
 
 	});
 

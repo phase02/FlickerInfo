@@ -2,7 +2,7 @@
 <!-- CSS (load bootstrap) -->
 <link rel="stylesheet"
 	href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-	
+
 <link href="Styles/formStyle.css" rel="stylesheet">
 <style>
 .navbar {
@@ -15,7 +15,7 @@
 <script
 	src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
 <script src="js/app.js"></script>
-<script src="js/sampleController.js"></script>
+<script src="js/loginControl.js"></script>
 <script src="js/samplecontroller1.js"></script>
 
 
@@ -28,23 +28,26 @@
 	<!-- NAVIGATION -->
 	<nav class="navbar navbar-inverse" role="navigation">
 		<div class="navbar-header">
-			<a class="navbar-brand" ui-sref="#">AngularUI Router</a>
+			<a class="navbar-brand" ui-sref="#">Seattle Grace Hospital</a>
 		</div>
-		<ul class="nav navbar-nav">
-			<li><a ui-sref="home">Home</a></li>
+		<ul ng-hide="logedin" class="nav navbar-nav navbar-right">
+			<li><a ui-sref="signup"><span class="glyphicon glyphicon-user"></span>
+					Sign Up</a></li>
 
-			<li><a ui-sref="about">SignUp Here!</a></li>
+			<li><a ui-sref="home"><span
+					class="glyphicon glyphicon-log-in"></span> Login</a></li>
 
+		</ul>
+
+		<ul ng-show="logedin" class="nav navbar-nav navbar-right">
+			<li><a ui-sref="home"><span class="glyphicon glyphicon-user"></span>
+					{{userName}}</a></li>
 		</ul>
 	</nav>
 
-	<!-- MAIN CONTENT -->
-	<div class="container">
 
-		<!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
-		<div ui-view></div>
-
-	</div>
+	<!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
+	<div ui-view></div>
 
 </body>
 </html>
