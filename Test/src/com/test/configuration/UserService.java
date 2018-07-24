@@ -13,11 +13,10 @@ public class UserService{
     private static final AtomicLong counter = new AtomicLong();
      
     private static List<User> users;
-     
-    static{
-        users= populateDummyUsers();
-    }
- 
+
+	/*
+	 * static{ users= populateDummyUsers(); }
+	 */
     public List<User> findAllUsers() {
         return users;
     }
@@ -68,7 +67,7 @@ public class UserService{
         users.clear();
     }
  
-    private static List<User> populateDummyUsers(){
+    public List<User> populateDummyUsers(){
         List<User> users = new ArrayList<User>();
         users.add(new User(counter.incrementAndGet(),"Sam", "NY", "sam@abc.com"));
         users.add(new User(counter.incrementAndGet(),"Tomy", "ALBAMA", "tomy@abc.com"));

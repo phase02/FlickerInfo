@@ -7,14 +7,14 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
-@RestController
+@Controller
 public class HelloWorldRestController {
   
     @Autowired
@@ -23,9 +23,9 @@ public class HelloWorldRestController {
      
     //-------------------Retrieve All Users--------------------------------------------------------
       
-    @RequestMapping(value = "/user/", method = RequestMethod.GET)
+    @RequestMapping(value = "/user", method = RequestMethod.GET)
     public ResponseEntity<List<User>> listAllUsers() {
-        List<User> users = userService.findAllUsers();
+        List<User> users = userService.populateDummyUsers();
         if(users.isEmpty()){
             return new ResponseEntity<List<User>>(HttpStatus.NO_CONTENT);//You many decide to return HttpStatus.NOT_FOUND
         }

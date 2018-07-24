@@ -11,7 +11,8 @@ routerApp.controller('loginControl', function($scope, $q, $rootScope, $http,
 	$scope.message = " ";
 	$scope.fetchUser = function() {
 		$http.get(
-				"https://jsonplaceholder.typicode.com/users?username="+ $scope.username).then(function(response) {
+				"http://localhost:4002/Test/UserDetails/user").then(function(response) {
+					console.log(response);
 			if (response.data.length == 0) {
 				$scope.message = 'Username or Password entered is not right';
 			} else {
